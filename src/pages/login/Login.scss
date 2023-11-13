@@ -1,0 +1,96 @@
+.Login {
+  margin-top: 23vh;
+  margin-bottom: 10vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  row-gap: 0.5em;
+
+  .sign-in {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(220, 220, 200);
+    border-radius: 5px;
+    width: 25%;
+    min-width: 380px;
+    padding: 1%;
+
+    .title {
+      font-size: 25px;
+      padding-bottom: 4%;
+      padding-top: 2%;
+    }
+
+    .wrong-credentials {
+      background-color: rgb(251, 227, 227);
+      border: 1px solid rgb(236, 121, 121);
+      border-radius: 5px;
+
+      color: rgb(196, 45, 45);
+      font-size: 15px;
+      padding: 1.5%;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      margin: 8px 0;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .password-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid gray;
+      border-radius: 2px;
+      margin: 8px 0;
+
+      .password-input:focus {
+        outline: none;
+      }
+
+      input {
+        border: none;
+        padding: 4px 10px;
+        width: 200%;
+      }
+
+      button {
+        color: gray;
+        background-color: rgb(255, 255, 255);
+        width: fit-content;
+        padding: 10px;
+        font-size: small;
+      }
+    }
+
+    button {
+      padding: 2%;
+      margin-top: 3%;
+      font-size: large;
+    }
+  }
+
+  .sign-up {
+    padding: 3% 5%;
+    border: 1px solid rgb(220, 220, 200);
+    border-radius: 5px;
+    width: 25%;
+    min-width: 380px;
+    padding: 1%;
+    text-align: center;
+
+    .link {
+      text-decoration: none;
+      color: rgb(47, 137, 153);
+    }
+  }
+}

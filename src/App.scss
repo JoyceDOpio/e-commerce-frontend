@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+
+  .button {
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    background-color: rgb(70, 201, 224);
+    border-radius: 5px;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .link {
+    text-decoration: none;
+  }
+}

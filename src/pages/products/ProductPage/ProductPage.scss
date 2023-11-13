@@ -1,0 +1,193 @@
+.ProductPage {
+  column-gap: 0.5em;
+  margin-top: 20vh;
+  padding: 0 15% 2%;
+  display: flex;
+
+  .container {
+    border: 1px solid rgb(220, 220, 200);
+    border-radius: 10px;
+  }
+
+  .image-carousel {
+    min-width: 300px;
+    min-height: 103vh;
+    flex: 2;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-size: 26px;
+    }
+
+    .rating-container {
+      color: rgb(169, 169, 169);
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 14px;
+
+      .rating-value {
+        width: auto;
+        margin-right: 0.5em;
+      }
+    }
+
+    .CarouselOrchestrator {
+      display: flex;
+      flex-direction: column;
+
+      .Carousel {
+        position: relative;
+        overflow: hidden;
+        width: 95%;
+
+        display: flex;
+        align-items: stretch;
+
+        .button-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: absolute;
+          height: inherit;
+          width: 100%;
+
+          button {
+            opacity: 0.75;
+            color: rgb(169, 169, 169);
+            background-color: rgb(255, 255, 255);
+            z-index: 10;
+            border: none;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            transition: all 0.5s ease-out;
+
+            &:hover {
+              opacity: 1;
+              cursor: pointer;
+              border: 1px solid rgb(169, 169, 169);
+              transition: all 0.5s ease-out;
+            }
+
+            &.disabled {
+              visibility: hidden;
+            }
+          }
+        }
+
+        .carousel-container {
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          scroll-behavior: smooth;
+          scroll-snap-type: x mandatory;
+          width: 100%;
+
+          .CarouselItem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            scroll-snap-align: center;
+            z-index: 0;
+
+            .image-container {
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              img {
+                max-width: 85%;
+                max-height: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .main-carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+
+        .Carousel {
+          height: 70vh;
+
+          .carousel-container {
+            .CarouselItem {
+              min-width: 100%;
+            }
+          }
+        }
+      }
+
+      .mini-carousel {
+        display: flex;
+        justify-content: center;
+
+        .Carousel {
+          height: 13vh;
+
+          .carousel-container {
+            column-gap: 0px;
+            justify-content: center;
+
+            .CarouselItem {
+              min-width: 100px;
+
+              .image-container {
+                width: 70px;
+              }
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .side {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+
+    .add-to-cart {
+      margin-left: 1%;
+
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5%;
+
+      .add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3% 0;
+
+        border-radius: 10px;
+        font-weight: bold;
+      }
+    }
+
+    .description {
+      min-width: 300px;
+      margin-top: 1%;
+      margin-left: 1%;
+      padding: 20px;
+      text-align: justify;
+    }
+  }
+}

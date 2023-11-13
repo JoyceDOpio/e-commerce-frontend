@@ -1,0 +1,35 @@
+.SearchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 70%;
+
+  form {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 500px;
+    border-radius: 5px;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 17px;
+    width: 85%;
+    border: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  button {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(169, 169, 169);
+    width: 10%;
+    cursor: pointer;
+  }
+}

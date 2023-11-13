@@ -1,0 +1,14 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+/node_modules
+/dist
+*.local
+/notes
+.env*
+
+# Editor directories and files
+.vscode/*
+

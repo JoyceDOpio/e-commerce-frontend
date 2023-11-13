@@ -1,0 +1,54 @@
+.StarRating {
+  display: flex;
+  color: rgb(243, 212, 13);
+
+  .star {
+    display: grid;
+    overflow: hidden;
+    $size: 25px;
+
+    @for $i from 1 to 6 {
+      .col-#{$i} {
+        grid-column: $i;
+        grid-row: 1;
+      }
+    }
+
+    .filled {
+      overflow: hidden;
+      z-index: 1;
+      width: $size;
+    }
+
+    .empty {
+      position: relative;
+      overflow: hidden;
+      width: $size;
+      height: $size;
+      z-index: 2;
+      background-color: rgb(255, 255, 255);
+
+      $offset: 0;
+      @for $i from 1 to 10 {
+        @if $i <= 5 {
+          $offset: -(calc(8 - 2 * $i)) * 1px;
+        } @else {
+          $offset: calc($i - 4) * 1px;
+        }
+        &[data-fill="#{calc($i / 10)}"] {
+          left: calc($size * $i / 10 - $offset);
+        }
+      }
+
+      &[data-fill="1"] {
+        z-index: 0;
+        background-color: inherit;
+      }
+    }
+
+    .outlined {
+      z-index: 3;
+      width: $size;
+    }
+  }
+}
